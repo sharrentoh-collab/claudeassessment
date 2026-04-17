@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preschool Fun Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Menu Section -->
+        <div id="menu" class="screen">
+            <h1>Welcome to Preschool Fun!</h1>
+            <div class="menu-buttons">
+                <button class="menu-btn" data-game="count">🍎 Count the Apples</button>
+                <button class="menu-btn" data-game="color">🎨 Color Match</button>
+                <button class="menu-btn" data-game="letter">📝 Find the Letter</button>
+            </div>
+        </div>
+
+        <!-- Game Section -->
+        <div id="game" class="screen hidden">
+            <button id="back-btn">⬅ Back to Menu</button>
+
+            <!-- Count the Apples Game -->
+            <div id="count-game" class="game-container hidden">
+                <h2>Count the Apples!</h2>
+                <div id="tree">
+                    <div class="tree-emoji">🌳</div>
+                    <div id="apples"></div>
+                </div>
+                <div class="options">
+                    <button class="option-btn" data-value="1">1</button>
+                    <button class="option-btn" data-value="2">2</button>
+                    <button class="option-btn" data-value="3">3</button>
+                </div>
+            </div>
+
+            <!-- Color Match Game -->
+            <div id="color-game" class="game-container hidden">
+                <h2>Color Match!</h2>
+                <div id="target-color">
+                    <div class="bucket">🪣</div>
+                </div>
+                <div class="options">
+                    <button class="option-btn color-obj" data-color="red">🎈</button>
+                    <button class="option-btn color-obj" data-color="blue">🚗</button>
+                    <button class="option-btn color-obj" data-color="green">🍃</button>
+                </div>
+            </div>
+
+            <!-- Find the Letter Game -->
+            <div id="letter-game" class="game-container hidden">
+                <h2>Find the Letter!</h2>
+                <div id="uppercase-letter"></div>
+                <div class="options">
+                    <button class="option-btn letter-opt"></button>
+                    <button class="option-btn letter-opt"></button>
+                    <button class="option-btn letter-opt"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
