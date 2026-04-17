@@ -4,6 +4,8 @@ An interactive educational web app for young children featuring six colorful min
 
 **Live site:** https://sharrentoh-collab.github.io/claudeassessment/
 
+![Preschool Fun Games](screenshot.png)
+
 ## Games
 
 | Game | Description |
