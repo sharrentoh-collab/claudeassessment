@@ -150,6 +150,32 @@ h1, h2 {
     text-transform: lowercase;
 }
 
+#shape-display, #animal-display {
+    font-size: 6em;
+    margin: 20px 0;
+}
+
+#math-question {
+    font-size: 4em;
+    margin: 20px 0;
+    color: #8A2BE2;
+    font-weight: bold;
+}
+
+.game-prompt {
+    font-size: 1.4em;
+    color: #555;
+    margin: 0 0 10px;
+}
+
+#shape-options .option-btn,
+#math-options .option-btn,
+#animal-options .option-btn {
+    font-size: 1.4em;
+    text-transform: capitalize;
+    min-width: 110px;
+}
+
 /* Animations */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {

@@ -15,6 +15,9 @@
                 <button class="menu-btn" data-game="count">🍎 Count the Apples</button>
                 <button class="menu-btn" data-game="color">🎨 Color Match</button>
                 <button class="menu-btn" data-game="letter">📝 Find the Letter</button>
+                <button class="menu-btn" data-game="shape">🔷 Shape Match</button>
+                <button class="menu-btn" data-game="math">➕ Simple Math</button>
+                <button class="menu-btn" data-game="animal">🐾 Animal Match</button>
             </div>
         </div>
 
@@ -58,6 +61,28 @@
                     <button class="option-btn letter-opt"></button>
                     <button class="option-btn letter-opt"></button>
                 </div>
+            </div>
+            <!-- Shape Match Game -->
+            <div id="shape-game" class="game-container hidden">
+                <h2>Shape Match!</h2>
+                <div id="shape-display"></div>
+                <p class="game-prompt">What shape is this?</p>
+                <div class="options" id="shape-options"></div>
+            </div>
+
+            <!-- Simple Math Game -->
+            <div id="math-game" class="game-container hidden">
+                <h2>Simple Math!</h2>
+                <div id="math-question"></div>
+                <div class="options" id="math-options"></div>
+            </div>
+
+            <!-- Animal Match Game -->
+            <div id="animal-game" class="game-container hidden">
+                <h2>Animal Match!</h2>
+                <div id="animal-display"></div>
+                <p class="game-prompt">What animal is this?</p>
+                <div class="options" id="animal-options"></div>
             </div>
         </div>
     </div>
