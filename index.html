@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFD700">
     <title>Preschool Fun Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,7 +27,8 @@
 
         <!-- Game Section -->
         <div id="game" class="screen hidden">
-            <button id="back-btn">⬅ Back to Menu</button>
+            <button id="back-btn" aria-label="Back to Menu">⬅ Back to Menu</button>
+            <div id="feedback-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
 
             <!-- Count the Apples Game -->
             <div id="count-game" class="game-container hidden">

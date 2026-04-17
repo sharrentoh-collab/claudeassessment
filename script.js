@@ -6,6 +6,7 @@ let correctAnswer = null;
 // DOM Elements
 const menuScreen = document.getElementById('menu');
 const gameScreen = document.getElementById('game');
+const feedbackLive = document.getElementById('feedback-live');
 const countGame = document.getElementById('count-game');
 const colorGame = document.getElementById('color-game');
 const letterGame = document.getElementById('letter-game');
@@ -215,21 +216,21 @@ function generateAnimal() {
 // Check answer
 function checkAnswer(gameType, value, btn) {
     if (value === correctAnswer) {
-        // Correct
+        feedbackLive.textContent = 'Correct! Great job!';
         btn.classList.add('bounce');
         setTimeout(() => {
             btn.classList.remove('bounce');
-            // Confetti
+            feedbackLive.textContent = '';
             for (let i = 0; i < 5; i++) {
                 const star = document.createElement('div');
                 star.textContent = '⭐';
                 star.className = 'confetti';
+                star.setAttribute('aria-hidden', 'true');
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = '50%';
                 document.body.appendChild(star);
                 setTimeout(() => star.remove(), 1000);
             }
-            // New question
             if (gameType === 'count') generateCount();
             else if (gameType === 'color') generateColor();
             else if (gameType === 'letter') generateLetter();
@@ -238,8 +239,11 @@ function checkAnswer(gameType, value, btn) {
             else if (gameType === 'animal') generateAnimal();
         }, 500);
     } else {
-        // Wrong
+        feedbackLive.textContent = 'Try again!';
         btn.classList.add('shake');
-        setTimeout(() => btn.classList.remove('shake'), 500);
+        setTimeout(() => {
+            btn.classList.remove('shake');
+            feedbackLive.textContent = '';
+        }, 500);
     }
 }
